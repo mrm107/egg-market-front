@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- The first thing in any HTML file should be the charset -->
+  <meta charset="utf-8">
+
+  <!-- Make the page mobile compatible -->
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" />
+
+  <!-- Allow installing the app to the homescreen -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Najva Push Notification -->
+  <!--<script type="text/javascript">
+    (function () {
+      var now = new Date();
+      var version = now.getFullYear().toString() + "0" + now.getMonth() + "0" + now.getDate() +
+        "0" + now.getHours();
+      var head = document.getElementsByTagName("head")[0];
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "https://app.najva.com/static/css/local-messaging.css" + "?v=" + version;
+      head.appendChild(link);
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.async = true;
+      script.src = "https://app.najva.com/static/js/scripts/eggmarket-website-24308-5c4e0461-4551-48a1-b446-59af4100a826.js" + "?v=" + version;
+      head.appendChild(script);
+    })()
+  </script>-->
+  <!-- END NAJVA PUSH NOTIFICATION -->
+
+  <!-- iOS home screen icons -->
+  <meta name="apple-mobile-web-app-title" content="اگمارکت">
+  <link rel="apple-touch-icon" sizes="120x120" href="/eggmarket.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/eggmarket.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/eggmarket.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/eggmarket.png">
+
+  <link rel="icon" href="/eggmarket.png" />
+  <title>اگمارکت | سامانه مرغداران ایران</title>
+
+  <script>
+    // Global catch handler
+    window.onerror = error => {
+      console.error('Eggmarket global Catch: ', error);
+      setTimeout(() => {
+        window.location.reload(true);
+      }, 4000);
+    };
+  </script>
+</head>
+
+<body dir="rtl">
+  <!-- Display a message if JS has been disabled on the browser. -->
+  <noscript><strong>جاوا اسکریپت در مرورگر شما فعال نیست</strong>, لطفا آن را فعال کنید.</noscript>
+
+  <!-- The app hooks into this div -->
+  <div id="app">
+    <style>
+      .initial-loading {
+        position: fixed;
+        width: 100%;
+        height: 92vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+      }
+
+      .splash-logo {
+        width: 150px;
+      }
+
+      .splash-loader {
+        width: 64px;
+        top: 24px;
+        position: relative;
+      }
+    </style>
+    <div class="initial-loading">
+      <img src="/eggmarket.png" class="splash-logo" alt="اگمارکت" />
+      <img src="/splash-spinner.gif" class="splash-loader" alt="اگمارکت" />
+    </div>
+  </div>
+  <!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically includes all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this HTML file. Don't add any assets here! (Check out webpackconfig.js if you want to know more) -->
+
+  <!---start GOFTINO code--->
+  <script type="text/javascript">
+    !function () { var a = window, d = document; function g() { var g = d.createElement("script"), s = "https://www.goftino.com/widget/5qRWM4", l = localStorage.getItem("goftino"); g.type = "text/javascript", g.async = !0, g.src = l ? s + "?o=" + l : s; d.getElementsByTagName("head")[0].appendChild(g); } "complete" === d.readyState ? g() : a.attachEvent ? a.attachEvent("onload", g) : a.addEventListener("load", g, !1); }();
+  </script>
+  <!---end GOFTINO code--->
+</body>
+
+</html>

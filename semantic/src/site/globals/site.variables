@@ -1,0 +1,13 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@fontName: 'IRANSans';
+
+@headerFont: @fontName, Arial, Helvetica, sans-serif;
+@pageFont: @fontName, Arial, Helvetica, sans-serif;
+@fontWeight: normal;
+@importGoogleFonts: false;
+@importBrandIcons: false;
+
+@yellow: rgb(245, 79, 41);
